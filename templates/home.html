@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Giveaways API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove margin from the body */
+            color: yellow; /* Set text color to yellow */
+            overflow: hidden; /* Hide the scrollbars */
+        }
+
+        h1 {
+            margin-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: yellow; /* Set text color to yellow */
+        }
+        .developer {
+            margin-top: 20px;
+            margin-left: 20px;
+            font-style: italic;
+            color: white; /* Set text color to yellow */
+        }
+        .developer a {
+            margin-right: 20px;
+            color: yellow; /* Set URL color to yellow */
+        }
+        .warning-message {
+            margin-bottom: 20px;
+            color: white;
+        }
+        .warning-message p {
+            margin-left: 20px;
+        }
+        .endpoint {
+            margin-left: 20px;
+        }
+        .endpoint-method {
+            font-weight: bold;
+        }
+        .endpoint-url {
+            margin-top: 5px;
+            color: white;
+        }
+        .response-example {
+            margin-top: 10px;
+        }
+        .response-example pre {
+            color: yellow;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Set z-index to a negative value to place it behind */
+            background-color: black;
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div> <!-- Place the block in the background -->
+
+    <h1>Welcome to Game Giveaways API <span class="developer">by <a href="https://github.com/Armen-Jean-Andreasian">Armen-Jean Andreasian</a></span></h1>
+    <br>
+    <div class="warning-message">
+        <p>It is recommended to cache the response taken from the API for a smoother experience.</p>
+        <p>To access the giveaways, you need to obtain the API password. Please contact the developer for the password.</p>
+    </div>
+
+    <div class="endpoint">
+        <h2>Usage:</h2>
+        <div class="endpoint-method">Method: GET</div>
+        <div class="endpoint-url">URL example: <code>/api/v1/password/steam</code></div>
+
+        <div class="response-example">
+            <h3>Response Example:</h3>
+            <pre>
+[
+    {
+        'game_title': 'Grand Theft Auto V',
+        'game_url': 'https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/',
+        'game_image_url': 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg'
+    },
+    {
+        'game_title': 'Atomic Heart',
+        'game_url': 'https://store.steampowered.com/app/668580/Atomic_Heart/',
+        'game_image_url': 'https://cdn.akamai.steamstatic.com/steam/apps/668580/header.jpg'
+    }
+]
+            </pre>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 5 // Set the value to 0 to disable particles
+          }
+        }
+      });
+    </script>
+</body>
+</html>
